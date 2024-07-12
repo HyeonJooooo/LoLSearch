@@ -24,7 +24,7 @@ def search_result(request):
         champion_names = []
         solo_tier_korean = ''
         champion_ids = []
-        api_key = 'RGAPI-79dbe176-bd2c-41bb-8cd3-07f21ded7da9'
+        api_key = '자신의 API KEY 작성하기'
         
         # 티어 이름 딕셔너리
         tier_names = {

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>전적검색</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/search_result.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </head>
+    <body id = "body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 header">
+                    <a href="{% url 'app:home' %}" class="title title-logo">
+                        <img src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/riot-logo.png">
+                    </a>
+
+                    <form class="form" method="get" name="search_form" action="{% url 'app:search_result' %}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="소환사명" name="search_text" value="{{ search_text }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">검색</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            {% if summoner_exist %}
+                <div class="row profile_img" style="margin: 40px; float: none;">
+                    <img id="random-image" style="display: block; margin: 0px;" class="img-thumbnail" src="" alt="Random Image">
+                    <span class="gamename" style="margin: 20px 0 0 20px; font-size: 35px;">
+                        {{ summoners_result.name }}<br>
+                        <span class="gamelevel" style="font-size: 18px;">LV: {{ summoners_result.level }}</span>
+                    </span>
+                </div>
+
+                <img class="div" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/tier_icon_breakline.png">
+                
+                <div class="row">
+                    <div class="col-12 tier-box pannel fog">
+                        {% if solo_tier %}
+                            <div class="row">
+                                <div class="col-6 tier effect">
+                                    <img class="tierImg" src="{% static 'images/ranked-emblem/emblem-' %}{{ solo_tier.tier }}.png" width="100%">
+                                    
+                                </div>
+                                <div class="col-6 fog effect">
+                                    <p class="league-name">{{ solo_tier.rank_type }}</p>
+
+                                    <img class="div_short" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/split-start-stats-panel-stats-divider.png">
+                                    
+                                    <div class="league-info">
+
+                                        <div class="left-side">
+                                            <p class="tier-name">{{ solo_tier.tier }}   {{ solo_tier.rank }}</p>
+                                            
+                                        </div>
+                                        
+                                        <div class="right-side">
+                                            <p>{{ solo_tier.points }}LP</p>
+                                            <p>{{ solo_tier.wins|add:solo_tier.losses }}전 {{ solo_tier.wins }}승 {{ solo_tier.losses }}패</p>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="no-info">
+                                <p>솔로랭크 티어가 존재하지 않습니다.</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <img class="div2" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/ranked-reference-modal-title-wing.png">
+                </div>
+
+                
+
+                <div class="row">
+                    <div class="col-8">
+                        {% if match_data %}
+                            {% for match_id, champion_names, win, death, kill, assists, kda, champion_ids in match_data %}
+                                <div class="row table">
+                                    <div class="col-4 champion_info">
+                                        <img class="champion-img" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{{ champion_ids }}.png" width="100%">
+                                        <p>{{ champion_names }}</p>
+                                    </div>
+                                    <div class="col-8 match_info {% if win %}bg-blue{% else %}bg-red{% endif %}">
+                                        <p>{{ kill }} / {{ death }} / {{ assists }}</p>
+                                        <p>kda: {{ kda }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            
+                        {% else %}
+                            <div>
+                                <p>배치 & 전적 정보 없음</p>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-4 rightbanner" id="rightbanner">
+                        {% if solo_tier %}
+                            <div class="banner" id="banner">
+                                <div>
+                                    <img class="tierIcon" src="{% static 'images/ranked-emblem/tier_icon/' %}{{ solo_tier.tier }}.png">
+                                    <p class="tier-name">{{ solo_tier_korean }}<br> {{ solo_tier.rank }}</p>
+                                    <p class="LP">{{ solo_tier.points }}LP</p>
+                                </div>
+                                <div class="icon-container">
+                                    <img class="respect_icon" src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-honor/global/default/assets/cool_miniicon.png">
+                                    <img class="respect_icon" src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-honor/global/default/assets/heart_miniicon.png">
+                                    <img class="respect_icon" src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-honor/global/default/assets/shotcaller_miniicon.png">
+                                </div>
+                                <img class="tierTrim" src="{% static 'images/ranked-emblem/trim/trim_' %}{{ solo_tier.tier }}.png" width="100%" height="auto">
+                            </div>
+                        {% else %}
+                        <div class="banner" id="banner">
+                                <p>티어 정보가 존재하지 않습니다.</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                </div>
+                
+            
+            {% else %}
+                <div class="no-info">
+                    <p>사용자가 존재하지 않습니다.</p>
+                </div>
+            {% endif %}
+            
+        </div>
+        <script src="{% static 'js/random_icon.js' %}"></script>
+        <script src="{% static 'js/fix_banner.js' %}"></script>
+    </body>
+</html>

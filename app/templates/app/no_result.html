@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>전적검색</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </head>
+    <body id = "body">
+        
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    
+
+                    <div class="title">
+                        <a href="{% url 'app:home' %}" class="icon">
+                            <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/lol_icon.png">
+                        </a>
+                        <h1>LEAGUE <span class="small-text">OF</span><br>LEGENDS</h1>
+                    </div>
+
+                    
+                    <img class="div div_short" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/tier_icon_breakline.png">
+
+                    <div class="containers">
+                        <h6 class="content-container">
+                            소환사가 존재하지 않습니다.  소환사이름을 확인하고 다시 시도해주세요.
+                        </h6>
+                    </div>
+                    <form method="get" name="search_form" action="{% url 'app:search_result' %}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="소환사명" name="search_text" value="{{ search_text }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">검색</button>
+                            </div>
+                        </div>
+                    </form>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>전적검색</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </head>
+    <body id = "body">
+        
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    
+
+                    <div class="title">
+                        <a href="{% url 'app:home' %}" class="icon">
+                            <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/lol_icon.png">
+                        </a>
+                        <h1>LEAGUE <span class="small-text">OF</span><br>LEGENDS</h1>
+                    </div>
+
+                    
+                    <img class="div div_short" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/tier_icon_breakline.png">
+
+
+                    <form method="get" name="search_form" action="{% url 'app:search_result' %}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="소환사명" name="search_text" value="{{ search_text }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">검색</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="blurred-image">
+                        <div class="containers">
+                            <h2 class="intro">소개</h2>
+                            <p class="content-container">
+                                마법공학 금속과 마법공학의 마법이 어우러진 결과 리그 오브 레전드의 독특한 파란색과 금색 위주 배색이 탄생했습니다. 현재 다양한 색조의 금색, 파란색, 회색이 활용되고 있기는 하지만, 시각언어의 일관성을 위해 여기에 명시된 색상만 사용해주시기 바랍니다. 새로운 색을 넣거나 순수한 검은색 또는 흰색을 사용해서는 안 됩니다.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    <img class="div" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-main-rule.png">
+
+                    <div class="containers">
+                        <h2 class="subtitle">마법공학 상자</h2>
+                        <p class="content-container">
+                            마법공학 상자는 게임 내에서 다양한 아이템과 보상을 얻을 수 있는 랜덤 박스입니다. 제가 만든 마법공학 상자에서는 챔피언을 뽑을 수 있습니다. 
+                        </p>
+                        <div class="background" id="background">
+                            <div id="chest_back">
+                                <img class="chest" id="chest" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/hextech-images/chest.png" alt="Hextech Chest">
+                            </div>
+                        </div>
+                        <div class="champion-background hidden" id="champion-background">
+                            <img class="random-champion hidden" id="random-champion" src="">
+                        </div>
+                        <div class="champion-name"></div>
+
+                        <button id="open-btn">열기</button>
+                    </div>
+                    <img class="div" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-main-rule.png">
+
+
+                    <div class="containers hidden" id="container-skin">
+                        <h2 class="subtitle">스킨 뽑기</h2>
+                        <p class="content-container">
+                            마법공학 상자에서 나온 챔피언의 스킨을 뽑을 수 있습니다. 
+                        </p>
+                        <div class="skin_box">
+                            <div class="image-container box1">
+                                <img class="skin-box foreground-image" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-unrevealed-back-card.png">
+                            </div>
+                            <div class="image-container box2">
+                                <img class="skin-box foreground-image" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-unrevealed-back-card.png">
+                            </div>
+                            <div class="image-container box3">
+                                <img class="skin-box foreground-image" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-unrevealed-back-card.png">
+                            </div>
+                            <div class="image-container box4">
+                                <img class="skin-box foreground-image" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-unrevealed-back-card.png">
+                            </div>
+                            <div class="image-container box5">
+                                <img class="skin-box foreground-image" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-unrevealed-back-card.png">
+                            </div>
+                        </div>
+
+                        
+                        <img class="div" src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/po-main-rule.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/random_chest.js' %}"></script>
+        <script src="{% static 'js/random_skin.js' %}"></script>
+    </body>
+</html>

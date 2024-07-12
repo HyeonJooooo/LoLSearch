@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'GapyeongHanseokbong-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#body {
+    background-color: #010A13;
+    font-family: 'Pretendard-Regular';
+    cursor: url('https://raw.communitydragon.org/latest/game/assets/ux/cursors/hover_precise.png'), auto;
+}
+.btn:hover{
+    cursor: url('https://raw.communitydragon.org/latest/game/assets/ux/cursors/hover_ally_precise.png'), auto;
+}
+.header{
+    display: flex;
+    width: 100%;
+}
+.title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+.title-logo {
+    width: auto;
+    height: 60px;
+}
+.form{
+    text-align: center;
+    margin: auto 10px auto auto;
+    width: 350px;
+    right: 0;
+}
+.input-group{
+    width: 350px;
+}
+.lol-icon{
+    width: 130px;
+    height: 130px;
+}
+.title h1{
+    font-family: 'GapyeongHanseokbong-Bold';
+    font-size: 35PX;
+    background: linear-gradient(to right top, #785A28, #C8AA6E, #F0E6D2);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    margin: auto auto 0 10px;
+}
+.small-text {
+    font-size: 0.5em;
+}
+.input-group{
+    margin-top: 20px;
+}
+.tier-box{
+    width: 400px;
+}
+.pannel{
+    height: 220px;
+}
+
+.fog{
+    background-image: url("https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-patching-xp-bg.png");
+    background-size: cover;
+    background-position: center; /* 이미지 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복하지 않음 */
+}
+.effect{
+    background-image: url("https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-magic-bg.png");
+    background-size: cover;
+    background-position: center; /* 이미지 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복하지 않음 */
+}
+.tier{
+    width: 400px;
+}
+.tierImg{
+    width: 250px;
+    height: 80%;
+    margin: auto ;
+}
+
+.tier{
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+p{
+    color: white;
+    font-family: 'Spiegel';
+}
+.gamename, .gamelevel{
+    color: white;
+}
+.gamename{
+    font-weight: bold;
+}
+.gamelevel{
+    font-weight: 300;
+}
+
+.div{
+    width: 100%;
+    margin: 10px auto 50px auto;
+}
+.div2{
+    width: 100%;
+    margin: 10px auto 70px auto;
+}
+.div_short{
+    width: 100%;
+    margin: 0;
+}
+
+
+#random-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.league-name{
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 20px;
+    padding: auto;
+    align-items: center;
+}
+
+.league-info{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 75%;
+}
+
+.tier-name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.left-side{
+    height: 100%;
+    display: flex;
+}
+
+.right-side{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.right-side p{
+    font-size: 18px;
+    color: #F0E6D2;
+}
+
+
+
+.champion_info {
+    display: flex;
+    width: 400px;
+    height: auto; /* 필요한 높이 설정 */
+    position: relative;
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), /* 투명도 그라디언트 */
+        url("https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-league-button-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.champion-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 500%;
+    margin: auto 10px;
+}
+
+.champion_info p{
+    margin-left: 20px;
+    justify-self: center;
+    margin: auto;
+}
+
+.table{
+    border-radius: 15px;
+    height: 150px;
+}
+.bg-blue {
+    background-color: rgba(78, 108, 173, 0.2);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+}
+
+.bg-red {
+    background-color: rgba(168, 87, 72, 0.2);
+    border-top-right-radius: 15px; 
+    border-bottom-right-radius: 15px;
+}
+.match_info{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    padding: auto;
+}
+.match_info p{
+    margin: auto auto auto 10px;
+}
+.no-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px; /* 필요한 높이 설정 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+}
+
+.no-info p{
+    font-size: 18px;
+    color: #F0E6D2;
+}
+
+.rightbanner{
+    position: relative; /* 부모 요소로부터 상대적 위치 설정 */
+    height: 100%;
+}
+
+.banner {
+    background-image: url("https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/regalia/banners/backgrounds/solidbanner_animatable.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 680px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#banner {
+    position: sticky;
+    top: 10px; /* 원하는 위치로 설정하세요. */
+}
+.tierIcon{
+    width: 90%;
+    height: 300px;
+}
+.icon-container{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+.respect_icon{
+    width: 20%;
+    height: 65px;
+}
+
+.tierTrim{
+    height: 200px;
+    margin: auto 0 0 0;
+}

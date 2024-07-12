@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'GapyeongHanseokbong-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#body {
+    background-color: #010A13;
+    position: relative;
+    cursor: url('https://raw.communitydragon.org/latest/game/assets/ux/cursors/hover_precise.png'), auto;
+
+}
+.btn:hover{
+    cursor: url('https://raw.communitydragon.org/latest/game/assets/ux/cursors/hover_ally_precise.png'), auto;
+}
+
+.col-lg-12{
+    position: relative;
+}
+.title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.title .icon img{
+    width: 170px;
+    height: 170px;
+}
+
+    
+.title h1{
+    font-family: 'GapyeongHanseokbong-Bold';
+    font-size: 60PX;
+    background: linear-gradient(to right top, #785A28, #C8AA6E, #F0E6D2);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bolder;
+    margin: auto auto 0 10px;
+}
+.small-text {
+    font-size: 0.5em;
+}
+
+#theme1{
+    border-width: 2px;
+    border-color: #C89B3C;
+    background: linear-gradient(to left, #C89B3C, #C8AA6E, #F0E6D2);
+    margin-bottom: 50px;
+}
+
+.containers .intro{
+    margin-top: 80px;
+}
+
+
+.containers{
+    width: 100%;
+    margin: 60px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containers h6{
+    color: #F0E6D2;
+}
+.containers h2{
+    font-weight: 700;
+    width: fit-content;
+    margin: 10px auto 30px auto;
+    color: #F0E6D2;
+}
+.containers p{
+    color: rgb(183, 171, 150);
+    width: 60%;
+    margin: 10px auto 30px auto;
+    font-weight: 20;
+    font-size: 15px;
+    text-align: center;
+}
+.containers img{
+    margin: 10px auto 10px auto;
+}
+
+.div{
+    width: 100%;
+    margin: 10px auto 50px auto;
+}
+
+
+
+.divider {
+    width: 400px; /* 선의 길이 조절 */
+    height: 1.5px;
+    background-color: #b19261; /* 선의 색상 */
+    position: relative;
+    margin: 30px auto 140px auto;
+}
+.divider-last{
+    margin: 30px auto 20px auto;
+}
+
+.divider .icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #0e1a25;
+    border-left: 2px solid #b19261;
+    border-right: 2px solid #b19261;
+    border-bottom: 2px solid #b19261;
+    transform: translateX(-50%) rotate(45deg);
+    top: -10px; /* 조정하여 가운데 배치 */
+}
+
+
+
+.chest {
+    width: 270px; /* 이미지 크기 조정 */
+    height: auto;
+    transition: transform 0.5s;
+    animation: float 2s ease-in-out infinite;
+}
+
+.background {
+    background: linear-gradient(to bottom,rgba(1, 10, 19, 0.6) 15%, rgba(255, 255, 255, 0)),
+    url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/lcu-alpha-backdrop.jpg');    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#chest_back{
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+.champion-background {
+    background: url('https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/ready-check-main-frame.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Flexbox를 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    width: 90%;
+    height: 600px;
+    padding: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.random-champion {
+    width: 600px; /* 이미지 크기 조정 */
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(0.5px); /* 흐리게 만드는 효과 */
+}
+.champion-name{
+    margin-top: 20px;
+    font-size: 25px ;
+    font-weight: bold;
+    color: rgb(183, 171, 150);
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hidden {
+    display: none;
+}
+#open-btn {
+    padding: 8px 15px;
+    background-color: #010A13;
+    color: #F0E6D2;
+    border: 1px solid #F0E6D2;
+    cursor: pointer;
+    font-size: 15px;
+    cursor: url('https://raw.communitydragon.org/latest/game/assets/ux/cursors/hover_ally_precise.png'), auto;
+
+}
+
+.skin_box {
+    width: 1300px;
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 요소들을 동일한 간격으로 배치 */
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 500px; /* 원하는 너비로 설정 */
+    height: 500px; /* 원하는 높이로 설정 */
+    margin: 10px;
+}
+.background-image, .foreground-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+.shrink {
+    transform: scale(0.9);
+}
+

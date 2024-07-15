@@ -74,5 +74,5 @@
 
 ## 📞 문의
 - **Email**: la0503ab@naver.com
-- **GitHub Issues**: 프로젝트 관련 문제나 제안사항은 [Issues](https://github.com/HyeonJooooo/Python-LoLSearch/issues)에 남겨주세요.
+- **GitHub Issues**: 프로젝트 관련 문제나 제안사항은 [Issues](https://github.com/lolsearch-0712/Python-LoLSearch/issues)에 남겨주세요.
 

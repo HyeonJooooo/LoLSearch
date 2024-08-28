@@ -1,4 +1,4 @@
-# 💎🏆 LEAGUE of LEGENDS 전적 검색 사이트 · 스킨 뽑기 🏆💎
+# 🏆 LEAGUE of LEGENDS 전적 검색 사이트 · 스킨 뽑기 🏆
 <br>
 
 ### ⚡ 전적 검색
@@ -39,40 +39,17 @@ https://github.com/user-attachments/assets/cbab0bb8-367f-4c4c-8955-6a3f065ee492
    - 뽑은 챔피언의 랜덤한 스킨 5개를 카드를 뒤집어서 뽑을 수 있다.
 <br>
 
-## 📦 설치 및 실행 방법
-1. **레포지토리 클론**
-    ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
-    ```
+## 🖼️ 실행 이미지
 
-2. **가상 환경 설정 및 패키지 설치**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
+#### 1. 메인 화면
+<img src="https://github.com/user-attachments/assets/e43958ad-ea78-4fa6-967a-7a8e685a465d" alt="메인 화면" style="vertical-align: top;" />
 
-3. **환경 변수 설정**
-   - 프로젝트 루트 디렉토리에 `.env` 파일을 생성하고, 다음과 같이 Riot Games API 키를 설정합니다.
-     ```
-     RIOT_API_KEY=your_riot_api_key
-     ```
+#### 2. 전적 검색
+<img src="https://github.com/user-attachments/assets/b94b1077-8df7-4b7b-8cdc-dcf2fbac1691" alt="전적 검색" style="vertical-align: top;" />
 
-4. **데이터베이스 마이그레이션 및 서버 실행**
-    ```bash
-    python manage.py migrate
-    python manage.py runserver
-    ```
+#### 3. 스킨 뽑기
+<img src="https://github.com/user-attachments/assets/e339bbbc-10b6-43f9-93ca-b7a44754d694" alt="스킨 뽑기" style="vertical-align: top;" />
 
-5. **웹 브라우저에서 접속**
-   - 브라우저를 열고 [http://127.0.0.1:8000](http://127.0.0.1:8000)으로 접속합니다.
-<br>
-
-## 🖼️ 스크린샷
-| 메인 화면 | 전적 검색 | 스킨 뽑기 |
-|-----------|-----------| -----------|
-| <img src="https://github.com/user-attachments/assets/e43958ad-ea78-4fa6-967a-7a8e685a465d" alt="메인 화면" style="vertical-align: top;" /> | <img src="https://github.com/user-attachments/assets/b94b1077-8df7-4b7b-8cdc-dcf2fbac1691" alt="전적 검색" style="vertical-align: top;" /> | <img src="https://github.com/user-attachments/assets/e339bbbc-10b6-43f9-93ca-b7a44754d694" alt="스킨 뽑기" style="vertical-align: top;" /> |
 <br>
 
 ## 🗂️ 프로젝트 구조
@@ -105,20 +82,6 @@ https://github.com/user-attachments/assets/cbab0bb8-367f-4c4c-8955-6a3f065ee492
     │      └─wings
     └─js
 ```
-
-<br>
-
-## 🤝 기여 방법
-1. 이 레포지토리를 포크합니다.
-2. 새로운 브랜치를 생성합니다 (`git checkout -b feature/your-feature`).
-3. 변경 사항을 커밋합니다 (`git commit -m 'Add some feature'`).
-4. 브랜치에 푸시합니다 (`git push origin feature/your-feature`).
-5. Pull Request를 엽니다.
-
-<br>
-
-## 📄 라이센스
-이 프로젝트는 MIT 라이센스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참고하세요.
 
 <br>
 
